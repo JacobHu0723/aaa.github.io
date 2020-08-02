@@ -24,7 +24,7 @@
 	</style>
 	<title>在线CPS测试_鼠标点击速度测试</title>
 <script type="text/javascript">
-function setCookie(ccps;expires=Sun,21 Aug 2022 12:00:00 UTC;path=/) {
+function setCookie(name, value, expires, path, domain, secure) {
         var curCookie = name + "=" + escape(value) +
                 ((expires) ? "; expires=" + expires.toGMTString() : "") +
                 ((path) ? "; path=" + path : "") +
@@ -36,7 +36,7 @@ function setCookie(ccps;expires=Sun,21 Aug 2022 12:00:00 UTC;path=/) {
                 if (confirm("Cookie exceeds 4KB and will be cut!"))
                         document.cookie = curCookie
 }
-function getCookie(ccps) {
+function getCookie(name) {
         var prefix = name + "="
         var cookieStartIndex = document.cookie.indexOf(prefix)
         if (cookieStartIndex == -1)
@@ -47,14 +47,14 @@ function getCookie(ccps) {
         return unescape(document.cookie.substring(cookieStartIndex + prefix.length, cookieEndIndex))
 }
 function savecookie(){
-         var cont=document.getElementById("recording-table").innerText;
+         var cont=document.getElementById("cook").innerText;
          if(cont){
          setCookie("cont",cont);
          }
 }
 window.onload=function(){
     var cont=getCookie("cont");
-    if(cont) document.getElementById("recording-table").innerText=cont;
+    if(cont) document.getElementById("cook").innerText=cont;
 }
 </script>
 </head>
