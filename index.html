@@ -23,6 +23,40 @@
 	<style type="text/css">@media screen and (max-width:779px){html .wrap .alert{width:100%}html .wrap .alert .qrcodes{display:none}html .wrap .alert p{margin:10px}html .wrap .alert .qrcodes-min{display:block;text-align:center}html .wrap .alert .qrcodes-min .qr-box{display:inline-block;margin:5px 15px 0}}
 	</style>
 	<title>在线CPS测试_鼠标点击速度测试</title>
+<script type="text/javascript">
+function setCookie(ccps;expires=Sun,21 Aug 2022 12:00:00 UTC;path=/) {
+        var curCookie = name + "=" + escape(value) +
+                ((expires) ? "; expires=" + expires.toGMTString() : "") +
+                ((path) ? "; path=" + path : "") +
+                ((domain) ? "; domain=" + domain : "") +
+                ((secure) ? "; secure" : "")
+        if ( (name + "=" + escape(value)).length <= 4000)
+                document.cookie = curCookie
+        else
+                if (confirm("Cookie exceeds 4KB and will be cut!"))
+                        document.cookie = curCookie
+}
+function getCookie(ccps) {
+        var prefix = name + "="
+        var cookieStartIndex = document.cookie.indexOf(prefix)
+        if (cookieStartIndex == -1)
+                return null
+        var cookieEndIndex = document.cookie.indexOf(";", cookieStartIndex + prefix.length)
+        if (cookieEndIndex == -1)
+                cookieEndIndex = document.cookie.length
+        return unescape(document.cookie.substring(cookieStartIndex + prefix.length, cookieEndIndex))
+}
+function savecookie(){
+         var cont=document.getElementById("recording-table").innerText;
+         if(cont){
+         setCookie("cont",cont);
+         }
+}
+window.onload=function(){
+    var cont=getCookie("cont");
+    if(cont) document.getElementById("recording-table").innerText=cont;
+}
+</script>
 </head>
 <body><!--[if lt IE 10]><div id="lowbrowser">你的浏览器实在是<strong>太太太</strong>旧了, 请升级你的浏览器！否则无法正常使用！<a href="https://browsehappy.com/" style="text-decoration: underline; color: red;"><strong>立即升级</strong></a></div><![endif]-->
 <div class="head">
